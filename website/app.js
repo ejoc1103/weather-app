@@ -1,7 +1,6 @@
 // import dotenv from ".env";
 // dotenv.config();
 // console.log(`Your Api key is ${process.env.API_KEY}`);
-const key = `&appid=c63598992b2c50b708e73048c67af5ae`;
 const units = "&units=imperial";
 const baseURL = `https://api.openweathermap.org/data/2.5/weather?zip=`;
 
