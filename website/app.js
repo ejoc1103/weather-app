@@ -7,6 +7,7 @@ const baseURL = `https://api.openweathermap.org/data/2.5/weather?zip=`;
 const form = document.querySelector("form");
 const zip = document.getElementById("zip");
 const feelings = document.getElementById("feelings");
+const key = "&appid=c63598992b2c50b708e73048c67af5ae";
 
 let zipText;
 let feelingsText;
@@ -22,6 +23,8 @@ form.addEventListener("submit", (e) => {
   feelingsText = feelings.value;
   zip.value = "";
   feelings.value = "";
+  console.log(zipText);
+  console.log(feelingsText);
 
   getWeather(baseURL, zipText, units, key)
     .then(function (data) {
@@ -92,7 +95,7 @@ const updateUI = async () => {
     date.innerHTML = allData[count].date;
     desc.innerHTML = allData[count].desc;
     temp.innerHTML = allData[count].temp;
-    windSpeed.innterHTML = allData[count].temp;
+    windSpeed.innerHTML = allData[count].windSpeed;
     content.innerHTML = allData[count].feelings;
 
     div.appendChild(cityName);
